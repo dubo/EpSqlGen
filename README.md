@@ -1,7 +1,13 @@
 # EpSqlGen
 Simple Excel / Json generator  for SQL databases, based on EpPlus library - https://github.com/JanKallman/EPPlus
 
-Supported databases ( tested mainly with Oracle and PgSql ) :  
+**Dependency**
+
+.Net 4.5.1
+
+for Oracle DB:  Oci Client or Oracle Data Provider for .NET (ODP.NET)
+
+**Supported databases ( tested mainly with Oracle and PgSql ) :** 
 
  - Oracle  providerName="System.Data.OracleClient"     https://github.com/ericmend/oracleClientCore-2.0
 			     providerName="Mono.Data.OracleClientCore"
