@@ -1,0 +1,35 @@
+{
+  "fileName": "Genres",
+  "template": null,
+  "autofilter": true,
+  "timestamp": true,
+  "version": "1.0.0.0",
+  "tabs": [
+    {
+      "query": "select * from genres",
+      "name": "Genres",
+      "title": "",
+      "printHeader": false,
+      "fields": [
+        {
+          "colId": 0,
+          "title": "GenreId",
+          "name": "GenreId",
+          "type": "Int64",
+          "format": "auto",
+          "minsize": 8,
+          "order": 1
+        },
+        {
+          "colId": 1,
+          "title": "Name",
+          "name": "Name",
+          "type": "String",
+          "format": "auto",
+          "minsize": 10,
+          "order": 2
+        }
+      ]
+    }
+  ]
+}
