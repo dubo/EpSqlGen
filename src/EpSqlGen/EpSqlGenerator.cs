@@ -39,7 +39,9 @@ namespace EpSqlGen
             Console.WriteLine("");
             Console.WriteLine("Switches:");
             Console.WriteLine("-h                   // Display help info");
-            Console.WriteLine("-v                   // Version ");            
+            Console.WriteLine("-v                   // Version ");
+            Console.WriteLine("-oMyOutfile.xls      // Outfile name (json or xlsx), with or without Path ");
+            Console.WriteLine("-o:MyOutfile.xls     // Outfile name (json or xlsx), with or without Path ");
             Console.WriteLine("-j                   // Generate json output file, (xlsx file is default)");
             Console.WriteLine("-jc                  // Generate json output only to console, usefull for integration with other products ");
             Console.WriteLine("-ec                  // Enable console logging output - usefull for debuggnig");               
@@ -77,7 +79,7 @@ namespace EpSqlGen
                 if (arg[0] == '-')
                 {
                     if (arg[1] == 'o')
-                        outFileName = arg.Substring(2).Trim();
+                        outFileName = (arg[2] == ':') ? arg.Substring(3).Trim() : arg.Substring(2).Trim();
                     else if (arg[1] == 'c')
                         repConnectString = (arg[2] == ':') ? arg.Substring(3).Trim() : arg.Substring(2).Trim();
                     else if (arg[1] == 'j')
@@ -732,7 +734,7 @@ namespace EpSqlGen
                 package.Workbook.Calculate();
 
                 // Set document properties
-                package.Workbook.Properties.Comments  = "Created with EpSqlGen Copyright © 2018 Miroslav Dubovský";
+                package.Workbook.Properties.Comments  = "Created with EpSqlGen Copyright © 2018 Miroslav Dubovsky";
                 package.Workbook.Properties.Created = DateTime.Now;
                 package.Workbook.Properties.Title = outFileName;
                 var pomProp =   System.Configuration.ConfigurationManager.AppSettings.Get("Author");

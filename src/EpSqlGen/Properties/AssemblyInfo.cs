@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("EpSqlGen")]
 [assembly: AssemblyDescription("Simple XLSX / JSON generator from SQL with EpPlus library")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Onnet, Ing. Miroslav Dubovský")]
+[assembly: AssemblyCompany("Onnet, Ing. Miroslav Dubovsky")]
 [assembly: AssemblyProduct("EpSqlGen")]
-[assembly: AssemblyCopyright("Copyright ©  2018 - Miroslav Dubovský")]
+[assembly: AssemblyCopyright("Copyright ©  2018 - Miroslav Dubovsky")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

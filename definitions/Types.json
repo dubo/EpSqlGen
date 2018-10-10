@@ -1,0 +1,59 @@
+{
+  "fileName": "Types",
+  "template": null,
+  "autofilter": true,
+  "timestamp": true,
+  "tabs": [
+    {
+      "query": "SELECT ZAKAZNIK_ID , ZMLUVA_ID, PRODUKT_KOD, CISLO_KAROSERIE, ZMLUVA_DLH, DT_VYSTAVENIA 
+  FROM DWHAPI.V_HEF_POHLADAVKY 
+  WHERE ZAKAZNIK_ID = :anZakaznikId  AND PRODUKT_KOD<> :asProdukt  -- 87086 'SC'
+  ORDER BY ZMLUVA_DLH DESC",
+      "name": "Types",
+      "title": "",
+      "printHeader": false,
+      "fields": [
+        {
+          "title": "ZAKAZNIK_ID",
+          "name": "ZAKAZNIK_ID",
+          "type": "Integer",
+          "format": "auto",
+          "minsize": 11,
+          "order": 1
+        },         
+        {
+          "title": "PRODUKT_KOD",
+          "name": "PRODUKT_KOD",
+          "type": "String",
+          "format": "auto",
+          "minsize": 11,
+          "order": 3
+        },
+        {
+          "title": "CISLO_KAROSERIE",
+          "name": "CISLO_KAROSERIE",
+          "type": "String",
+          "format": "auto",
+          "minsize": 15,
+          "order": 4
+        },
+        {
+          "title": "ZMLUVA_DLH",
+          "name": "ZMLUVA_DLH",
+          "type": "Decimal",
+          "format": "auto",
+          "minsize": 10,
+          "order": 5
+        },
+        {
+          "title": "DT_VYSTAVENIA",
+          "name": "DT_VYSTAVENIA",
+          "type": "DateTime",
+          "format": "DD.MM.YYYY",
+          "minsize": 13,
+          "order": 6
+        }
+      ]
+    }
+  ]
+}
